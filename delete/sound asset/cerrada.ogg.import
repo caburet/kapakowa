@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cerrada.ogg-53dcd1a6249e11db8d06958dabb1617f.oggstr"
+
+[deps]
+
+source_file="res://delete/sound asset/cerrada.ogg"
+dest_files=[ "res://.import/cerrada.ogg-53dcd1a6249e11db8d06958dabb1617f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

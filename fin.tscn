@@ -4,7 +4,7 @@
 [ext_resource path="res://fondo perso.png" type="Texture" id=2]
 [ext_resource path="res://perso.png" type="Texture" id=3]
 [ext_resource path="res://light.png" type="Texture" id=4]
-[ext_resource path="res://sounds/explosionenorme + reberv.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/explosionenorme.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Explode"
@@ -52,4 +52,5 @@ autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+autostart = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

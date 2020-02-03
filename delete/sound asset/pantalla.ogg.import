@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pantalla.ogg-6804c4d8133695c5c4c4cacb6e1c9714.oggstr"
+
+[deps]
+
+source_file="res://delete/sound asset/pantalla.ogg"
+dest_files=[ "res://.import/pantalla.ogg-6804c4d8133695c5c4c4cacb6e1c9714.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

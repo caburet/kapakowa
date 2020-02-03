@@ -107,13 +107,12 @@ position = Vector2( -7.4007, 345.091 )
 nombre = "moneda"
 
 [node name="AnimatedSprite3D" type="AnimatedSprite" parent="."]
-editor/display_folded = true
 position = Vector2( 875, 371.053 )
 scale = Vector2( 0.8, 0.8 )
 z_as_relative = false
 frames = SubResource( 1 )
 animation = "latiendo"
-frame = 21
+frame = 19
 speed_scale = 2.0
 playing = true
 
@@ -135,7 +134,7 @@ scale = Vector2( 0.9, 0.9 )
 z_index = 4
 z_as_relative = false
 frames = SubResource( 3 )
-frame = 21
+frame = 22
 speed_scale = 2.0
 playing = true
 
@@ -158,7 +157,6 @@ color = "violeta"
 referencia = ExtResource( 2 )
 
 [node name="Contenedor5" parent="." instance=ExtResource( 62 )]
-editor/display_folded = true
 position = Vector2( 421.039, 759.684 )
 scale = Vector2( 0.5, 0.5 )
 color = "violeta"

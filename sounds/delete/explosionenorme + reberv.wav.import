@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosionenorme + reberv.wav-a7346bf496e03cc3f94f6d3764cf5741.sample"
+
+[deps]
+
+source_file="res://sounds/delete/explosionenorme + reberv.wav"
+dest_files=[ "res://.import/explosionenorme + reberv.wav-a7346bf496e03cc3f94f6d3764cf5741.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

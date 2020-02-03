@@ -31,7 +31,6 @@ animations = [ {
 [node name="Node" type="Node"]
 
 [node name="Light2D2" type="Light2D" parent="."]
-editor/display_folded = true
 position = Vector2( 411.651, -85.3736 )
 rotation = -1.5708
 texture = ExtResource( 1 )
@@ -116,7 +115,7 @@ rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 3 )
 animation = "caminar"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="." groups=[
@@ -169,6 +168,7 @@ rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 3 )
 animation = "caminar"
+frame = 2
 playing = true
 
 [node name="Player3" type="KinematicBody2D" parent="." groups=[
@@ -214,6 +214,7 @@ rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 3 )
 animation = "caminar"
+frame = 2
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Player3"]
@@ -284,4 +285,5 @@ rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 3 )
 animation = "caminar"
+frame = 2
 playing = true

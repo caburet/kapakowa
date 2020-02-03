@@ -24,14 +24,14 @@ func get_input():
 #		$AnimatedSprite.animation = "caminar"
 
 	if Input.is_action_pressed('ui_down'):
-		        velocity.y += 1
+				velocity.y += 1
 	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
-    get_input()
-    velocity = move_and_slide(velocity)
+	get_input()
+	velocity = move_and_slide(velocity)
 	
 func get_color():
 	return color

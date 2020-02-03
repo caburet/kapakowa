@@ -14,9 +14,9 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	if seg >= 30:
+	if seg >= 60:
 		
 		get_tree().change_scene("res://fin.tscn")
 	seg += 1
-	$Label.text= str(30 - seg)
+	$Label.text= str(60 - seg)
 	pass # Replace with function body.

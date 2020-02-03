@@ -19,6 +19,9 @@ anchor_bottom = 1.0
 margin_top = 1.10803
 margin_bottom = 1.10803
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite2" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -42,50 +45,50 @@ z_as_relative = false
 texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
-[node name="Light2D2" type="Light2D" parent="."]
-position = Vector2( 424.137, 648.429 )
+[node name="Light2D2" type="Light2D" parent="Light2D"]
+position = Vector2( 105.626, 352.324 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
-[node name="Light2D3" type="Light2D" parent="."]
-position = Vector2( 567.332, 259.05 )
+[node name="Light2D3" type="Light2D" parent="Light2D"]
+position = Vector2( 248.821, -37.055 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
-[node name="Light2D4" type="Light2D" parent="."]
-position = Vector2( 1233.3, 189.285 )
+[node name="Light2D4" type="Light2D" parent="Light2D"]
+position = Vector2( 914.789, -106.82 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
-[node name="Light2D5" type="Light2D" parent="."]
-position = Vector2( 985.754, 649.832 )
+[node name="Light2D5" type="Light2D" parent="Light2D"]
+position = Vector2( 667.243, 353.727 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
-[node name="Light2D6" type="Light2D" parent="."]
-position = Vector2( 1022.71, 402.216 )
+[node name="Light2D6" type="Light2D" parent="Light2D"]
+position = Vector2( 704.199, 106.111 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
-[node name="Light2D7" type="Light2D" parent="."]
-position = Vector2( 882.392, 366.913 )
+[node name="Light2D7" type="Light2D" parent="Light2D"]
+position = Vector2( 563.881, 70.808 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
-[node name="Light2D8" type="Light2D" parent="."]
-position = Vector2( 704.699, 160.783 )
+[node name="Light2D8" type="Light2D" parent="Light2D"]
+position = Vector2( 386.188, -135.322 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 4 )
