@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/animacion2.ogg-fb2345a1f323d18d6bb51564c90b7ab8.oggstr"
+
+[deps]
+
+source_file="res://sounds/animacion2.ogg"
+dest_files=[ "res://.import/animacion2.ogg-fb2345a1f323d18d6bb51564c90b7ab8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

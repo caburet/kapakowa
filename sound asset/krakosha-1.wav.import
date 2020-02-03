@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/krakosha-1.wav-fcc34c5b1b28f9a8d0dce22bd8ff194e.sample"
+
+[deps]
+
+source_file="res://sound asset/krakosha-1.wav"
+dest_files=[ "res://.import/krakosha-1.wav-fcc34c5b1b28f9a8d0dce22bd8ff194e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

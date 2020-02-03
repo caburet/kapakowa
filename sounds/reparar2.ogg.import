@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/reparar2.ogg-7559b51a78c83b9362dd03a99bb31060.oggstr"
+
+[deps]
+
+source_file="res://sounds/reparar2.ogg"
+dest_files=[ "res://.import/reparar2.ogg-7559b51a78c83b9362dd03a99bb31060.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

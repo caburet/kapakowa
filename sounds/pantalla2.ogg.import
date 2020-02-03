@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pantalla2.ogg-e342b1cc93896b681d704ad01a80552d.oggstr"
+
+[deps]
+
+source_file="res://sounds/pantalla2.ogg"
+dest_files=[ "res://.import/pantalla2.ogg-e342b1cc93896b681d704ad01a80552d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
