@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Nodos/Muro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Nodos/Objeto.tscn" type="PackedScene" id=2]
@@ -62,8 +62,7 @@
 [ext_resource path="res://tuberia/Armature_animtion0_31.png" type="Texture" id=60]
 [ext_resource path="res://tuberia/Armature_animtion0_32.png" type="Texture" id=61]
 [ext_resource path="res://Nodos/Contenedor.tscn" type="PackedScene" id=62]
-[ext_resource path="res://icon.png" type="Texture" id=63]
-[ext_resource path="res://Script/Gestor_objetos.gd" type="Script" id=64]
+[ext_resource path="res://Script/Gestor_objetos.gd" type="Script" id=63]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -112,7 +111,7 @@ scale = Vector2( 0.8, 0.8 )
 z_as_relative = false
 frames = SubResource( 1 )
 animation = "latiendo"
-frame = 19
+frame = 5
 speed_scale = 2.0
 playing = true
 
@@ -134,7 +133,7 @@ scale = Vector2( 0.9, 0.9 )
 z_index = 4
 z_as_relative = false
 frames = SubResource( 3 )
-frame = 22
+frame = 11
 speed_scale = 2.0
 playing = true
 
@@ -162,12 +161,6 @@ scale = Vector2( 0.5, 0.5 )
 color = "violeta"
 referencia = ExtResource( 2 )
 
-[node name="exclamacion" type="Sprite" parent="Contenedor5"]
-visible = false
-position = Vector2( 0, -20.5769 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 63 )
-
 [node name="Contenedor8" parent="." instance=ExtResource( 62 )]
 position = Vector2( 521.656, 519.213 )
 scale = Vector2( 0.5, 0.5 )
@@ -194,7 +187,7 @@ referencia = ExtResource( 2 )
 
 [node name="Gestor_objetos" type="Node2D" parent="."]
 position = Vector2( 872, 420.356 )
-script = ExtResource( 64 )
+script = ExtResource( 63 )
 [connection signal="body_entered" from="Moneda-id_id" to="Moneda-id_id" method="_on_Moneda_body_entered"]
 [connection signal="body_entered" from="Moneda-id_id2" to="Moneda-id_id2" method="_on_Moneda_body_entered"]
 [connection signal="body_entered" from="Moneda-id_patito" to="Moneda-id_patito" method="_on_Moneda_body_entered"]

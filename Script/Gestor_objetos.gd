@@ -1,9 +1,15 @@
 extends Node2D
 
-var colores = ["red","green","blue","yellow"]
+var cinta = load("res://objetos/cinta.png") # Godot loads the resource at compile-time
+var engranaje = load("res://objetos/engranajes.png") # Godot loads the resource at compile-time
+var focos = load("res://objetos/focos.png") # Godot loads the resource at compile-time
+var llave = load("res://objetos/llave.png") # Godot loads the resource at compile-time
+
+var colores = ["red","green","blue","yellow"] #["blue","blue","blue","blue"]#
 
 var nombres = ["cinta","engranaje","focos","llave"]
 
+var texturas = { "cinta": cinta, "engranaje": engranaje ,"focos" : focos,"llave":llave}
 
 func _ready():
 	var contenedores = get_tree().get_nodes_in_group("contenedor")
@@ -35,14 +41,16 @@ func _ready():
 		reco = reco -1
 
 	reco = len(contenedores) - 1
-	for color in nombres:
+	for nombre in nombres:
 		azar =  randi() % ( reco + 1 )
-		contenedores[azar].objeto_color = color
+		contenedores[azar].objeto_nombre = nombre
+		contenedores[azar].textura = texturas[nombre]
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
 
 		azar =  randi() % ( reco + 1 )
-		contenedores[azar].objeto_color = color
+		contenedores[azar].objeto_nombre = nombre
+		contenedores[azar].textura = texturas[nombre]
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
 	

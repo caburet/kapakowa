@@ -28,7 +28,7 @@ func get_input():
 func _physics_process(delta):
     get_input()
     velocity = move_and_slide(velocity)
-	
+
 func get_color():
 	return color
 
@@ -48,10 +48,9 @@ func set_cargarObjetos(objetoCargado ):
 		if( objeto == null):
 #			print(objetoCargado)
 			objeto = objetoCargado
-			
+
 			objeto.position.x = -123
 			objeto.position.y = 0
 	else:
 		objeto = null
 #		print("Se anula el objeto")
-	

@@ -1,11 +1,12 @@
 extends Area2D
 
-export (int) var tiempoRequerido
+var tiempoRequerido = 2
 
-export (String) var objeto_1 = "moneda"
-export (String) var objeto_2 = "aceite"
-export (String) var objeto_3 = "grasa"
-export (String) var objeto_4 = "amor"
+ #["cinta","engranaje","focos","llave"]
+export (String) var objeto_1 = "engranaje"
+export (String) var objeto_2 = "focos"
+export (String) var objeto_3 = "llave"
+export (String) var objeto_4 = "cinta"
 
 var objeto_1_faltante = false
 var objeto_2_faltante = false
@@ -27,7 +28,7 @@ func _ready():
 
 func _on_Reactor_body_entered(body):
 	if body.is_in_group("player"):
-		print("entro un player")
+#		print("entro un player")
 		if ( !objeto_1_faltante && body.objeto_nombre() == objeto_1):
 #			objeto_1_proceso = true
 			objeto_1_jugador = body
@@ -51,7 +52,7 @@ func _on_Reactor_body_exited(body):
 	if body.is_in_group("player"):
 		if !objeto_1_faltante && objeto_1_proceso :
 			$Timer_1.stop()
-			print("no se termino")
+#			print("no se termino")
 		if !objeto_2_faltante && objeto_2_proceso :
 			$Timer_2.stop()
 		if !objeto_3_faltante && objeto_3_proceso :
@@ -61,27 +62,34 @@ func _on_Reactor_body_exited(body):
 
 
 func _on_Timer_1_timeout():
-	print("termino 1")
+#	print("termino 1")
 	$Timer_1.stop()
 	objeto_1_faltante = true
 	objeto_1_jugador.set_cargarObjetos(null)
+	_termino()
 
 
 func _on_Timer_2_timeout():
-	print("termino 2")
+#	print("termino 2")
 	$Timer_2.stop()
 	objeto_2_faltante = true
 	objeto_2_jugador.set_cargarObjetos(null)
+	_termino()
 
 func _on_Timer_3_timeout():
-	print("termino 3")
+#	print("termino 3")
 	$Timer_3.stop()
 	objeto_3_faltante = true
 	objeto_3_jugador.set_cargarObjetos(null)
-
+	_termino()
 
 func _on_Timer_4_timeout():
-	print("termino 4")
+#	print("termino 4")
 	$Timer_4.stop()
 	objeto_4_faltante = true
 	objeto_4_jugador.set_cargarObjetos(null)
+	_termino()
+	
+func _termino():
+	if(objeto_1_faltante && objeto_2_faltante && objeto_3_faltante && objeto_4_faltante ):
+		self.get_tree().change_scene("res://win.tscn")
