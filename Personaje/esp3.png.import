@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/oscuridad.png-ab04afd497eecdab90562891c85b4038.stex"
+path="res://.import/esp3.png-ac550e7c7a404f7cdab4576121747d7b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Playersombra/oscuridad.png"
-dest_files=[ "res://.import/oscuridad.png-ab04afd497eecdab90562891c85b4038.stex" ]
+source_file="res://Personaje/esp3.png"
+dest_files=[ "res://.import/esp3.png-ac550e7c7a404f7cdab4576121747d7b.stex" ]
 
 [params]
 

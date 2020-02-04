@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spot.png-3d8e6b0807c1f1ca64b424434dbdbd7c.stex"
+path="res://.import/esp2.png-f6d870bed758627cff41bbb74a17d034.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Playersombra/spot.png"
-dest_files=[ "res://.import/spot.png-3d8e6b0807c1f1ca64b424434dbdbd7c.stex" ]
+source_file="res://Personaje/esp2.png"
+dest_files=[ "res://.import/esp2.png-f6d870bed758627cff41bbb74a17d034.stex" ]
 
 [params]
 

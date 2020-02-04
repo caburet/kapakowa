@@ -15,17 +15,43 @@ func _ready():
 # T F G H
 
 func get_input():
-    velocity = Vector2()
-    if Input.is_action_pressed('ui_right_3'):
-        velocity.x += 1
-    if Input.is_action_pressed('ui_left_3'):
-        velocity.x -= 1
-    if Input.is_action_pressed('ui_down_3'):
-        velocity.y += 1
-    if Input.is_action_pressed('ui_up_3'):
-        velocity.y -= 1
-    velocity = velocity.normalized() * speed
+#    velocity = Vector2()
+#    if Input.is_action_pressed('ui_right_3'):
+#        velocity.x += 1
+#    if Input.is_action_pressed('ui_left_3'):
+#        velocity.x -= 1
+#    if Input.is_action_pressed('ui_down_3'):
+#        velocity.y += 1
+#    if Input.is_action_pressed('ui_up_3'):
+#        velocity.y -= 1
+#    velocity = velocity.normalized() * speed
 
+	velocity = Vector2()
+	if Input.is_action_pressed('ui_right_3'):
+		velocity.x += 1
+		$animacion.animation = "derecha"
+		$animacion.flip_h=false
+		$animacion.play()
+
+	if Input.is_action_pressed('ui_left_3'):
+		velocity.x -= 1
+		$animacion.animation = "derecha"
+		$animacion.flip_h=true
+		$animacion.play()
+
+	if Input.is_action_pressed('ui_down_3'):
+		velocity.y += 1
+		$animacion.animation = "frente"
+#		$animacion.flip_v=false
+		$animacion.play()
+
+	if Input.is_action_pressed('ui_up_3'):
+		velocity.y -= 1
+		$animacion.animation = "arriba"
+#		$animacion.flip_v=true
+		$animacion.play()
+	velocity = velocity.normalized() * speed
+	
 func _physics_process(delta):
     get_input()
     velocity = move_and_slide(velocity)

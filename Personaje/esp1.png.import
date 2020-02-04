@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flecha.png-dce8aad7060e0cebba0276ef7b2dda71.stex"
+path="res://.import/esp1.png-a6d3faf6fee650a5c51cf93d06c1103f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Playersombra/flecha.png"
-dest_files=[ "res://.import/flecha.png-dce8aad7060e0cebba0276ef7b2dda71.stex" ]
+source_file="res://Personaje/esp1.png"
+dest_files=[ "res://.import/esp1.png-a6d3faf6fee650a5c51cf93d06c1103f.stex" ]
 
 [params]
 

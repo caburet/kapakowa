@@ -265,7 +265,7 @@ anims/Animintro = SubResource( 1 )
 position = Vector2( -21.4796, 0 )
 scale = Vector2( 1.15, 1.15 )
 frames = SubResource( 2 )
-frame = 65
+frame = 23
 speed_scale = 5.0
 playing = true
 
@@ -283,13 +283,12 @@ scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 77 )
 
 [node name="Creditos" type="AnimatedSprite" parent="."]
-visible = false
 scale = Vector2( 0.9, 0.9 )
 frames = SubResource( 3 )
 frame = 27
 speed_scale = 2.0
 
-[node name="Button" type="Button" parent="."]
+[node name="Start" type="Button" parent="."]
 margin_left = -167.632
 margin_top = 47.0
 margin_right = -155.632
@@ -298,7 +297,7 @@ rect_scale = Vector2( 30.04, 3.44 )
 flat = true
 clip_text = true
 
-[node name="Button2" type="Button" parent="."]
+[node name="Creditos2" type="Button" parent="."]
 margin_left = -173.632
 margin_top = 116.0
 margin_right = -161.632
@@ -307,7 +306,7 @@ rect_scale = Vector2( 30.04, 3.24 )
 flat = true
 clip_text = true
 
-[node name="Button3" type="Button" parent="."]
+[node name="Salir" type="Button" parent="."]
 margin_left = -168.632
 margin_top = 183.0
 margin_right = -156.632
@@ -325,7 +324,7 @@ margin_bottom = -423.414
 rect_scale = Vector2( 109.797, 42.7661 )
 flat = true
 clip_text = true
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Creditos2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
