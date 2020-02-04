@@ -5,7 +5,8 @@ var engranaje = load("res://objetos/engranajes.png") # Godot loads the resource 
 var focos = load("res://objetos/focos.png") # Godot loads the resource at compile-time
 var llave = load("res://objetos/llave.png") # Godot loads the resource at compile-time
 
-var colores = ["red","green","blue","yellow"] #["blue","blue","blue","blue"]#
+var colores = ["red","green","blue","yellow"] 
+
 
 var nombres = ["cinta","engranaje","focos","llave"]
 

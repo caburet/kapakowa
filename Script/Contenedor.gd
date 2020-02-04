@@ -1,10 +1,17 @@
 extends Area2D
 
-export (String) var color = "blue"
+export (String) var color = ""
 export (String) var objeto_color = ""
 export (String) var objeto_nombre= ""
 export (PackedScene) var referencia = null;
 var textura
+
+var globo = load("res://globos/globos-06.png") 
+var exclamacionBlue = load("res://globos/globos-02.png") 
+var exclamacionYellow = load("res://globos/globos-04.png") 
+var exclamacionRed= load("res://globos/globos-03.png") 
+var exclamacionGreen = load("res://globos/globos-05.png") 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,12 +22,12 @@ func _ready():
 
 #
 func _on_Area2D_body_entered(body):
-#	print("entra algo")
-#	print("contenedor",body.get_groups())
+	print("entra algo")
+	print("contenedor",body.get_groups())
 	if body.is_in_group("player"):
-#		print("entra player ","body color: ",body.color," color : ", color)
+		print("Entra player ","color Player: ",body.color," colorContenedor : ", color)
 		if body.get_color() == color :
-			#print("mismo color")
+			print("mismo color")
 			var nuevo_objeto = referencia.instance()
 			self.get_parent().add_child(nuevo_objeto)
 			nuevo_objeto.color = objeto_color
@@ -31,8 +38,19 @@ func _on_Area2D_body_entered(body):
 			nuevo_objeto.position.x = self.position.x
 			nuevo_objeto.position.y = self.position.y
 			self.queue_free()
-#		else:
-#print("distinto color")
-#		else:
-#			$exclamacion.Visible
+		else:
 			
+			print("Tiene que abrirlo--->"+ color)
+			if (color== "blue"):
+				$exclam.set_texture(exclamacionBlue)
+			if (color== "red"):
+				$exclam.set_texture(exclamacionRed)
+			if (color== "green"):
+				$exclam.set_texture(exclamacionGreen)
+			if (color == "yellow"):
+				$exclam.set_texture(exclamacionYellow)
+			$globo.show()
+			$exclam.show()
+			yield(get_tree().create_timer(1.0), "timeout")
+			$globo.hide()
+			$exclam.hide()
