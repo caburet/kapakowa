@@ -46,7 +46,7 @@ func objeto_nombre():
 func set_cargarObjetos(objetoCargado ):
 	if(objetoCargado != null):
 		if( objeto == null):
-#			print(objetoCargado)
+			print(objetoCargado)
 			objeto = objetoCargado
 
 			objeto.position.x = -123
