@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://prueba1.gd" type="Script" id=1]
 [ext_resource path="res://fondotileset.jpeg" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Playersombra2/player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sounds/krakosha-1.ogg" type="AudioStream" id=7]
 [ext_resource path="res://DS-DIGIB.TTF" type="DynamicFontData" id=8]
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 1
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -95,6 +98,7 @@ texture = ExtResource( 4 )
 color = Color( 0.968627, 0.384314, 0.384314, 1 )
 
 [node name="Mapa" parent="." instance=ExtResource( 5 )]
+material = SubResource( 2 )
 position = Vector2( -159.073, -96.378 )
 
 [node name="Node" parent="." instance=ExtResource( 6 )]
@@ -113,4 +117,7 @@ margin_right = 728.089
 margin_bottom = 313.953
 custom_fonts/font = SubResource( 1 )
 text = "30"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
