@@ -5,8 +5,8 @@
 [ext_resource path="res://tilesetconverrido.tres" type="TileSet" id=3]
 [ext_resource path="res://spot.png" type="Texture" id=4]
 [ext_resource path="res://Nodos/Mapa.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Playersombra/player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://sounds/krakosha-1.wav" type="AudioStream" id=7]
+[ext_resource path="res://Playersombra2/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sounds/krakosha-1.ogg" type="AudioStream" id=7]
 [ext_resource path="res://DS-DIGIB.TTF" type="DynamicFontData" id=8]
 
 [sub_resource type="DynamicFont" id=1]
