@@ -29,9 +29,9 @@ blend_mode = 1
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "frente",
+"name": "arriba",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -39,9 +39,9 @@ animations = [ {
 "name": "New Anim",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "arriba",
+"name": "frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
@@ -114,8 +114,8 @@ __meta__ = {
 
 [node name="Resplandor" type="Light2D" parent="Player"]
 texture = ExtResource( 2 )
-texture_scale = 8.0
-color = Color( 0, 0.0196078, 1, 0.392157 )
+texture_scale = 5.0
+color = Color( 1, 1, 1, 0.392157 )
 mode = 2
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 1 )

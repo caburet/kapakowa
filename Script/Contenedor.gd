@@ -6,11 +6,11 @@ export (String) var objeto_nombre= ""
 export (PackedScene) var referencia = null;
 var textura
 
-var globo = load("res://globos/globos-06.png") 
-var exclamacionBlue = load("res://globos/globos-02.png") 
-var exclamacionYellow = load("res://globos/globos-04.png") 
-var exclamacionRed= load("res://globos/globos-03.png") 
-var exclamacionGreen = load("res://globos/globos-05.png") 
+var globo = load("res://Assets/globos/globos-06.png") 
+var exclamacionBlue = load("res://Assets/globos/globos-02.png") 
+var exclamacionYellow = load("res://Assets/globos/globos-04.png") 
+var exclamacionRed= load("res://Assets/globos/globos-03.png") 
+var exclamacionGreen = load("res://Assets/globos/globos-05.png") 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

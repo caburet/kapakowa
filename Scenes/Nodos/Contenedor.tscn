@@ -5,9 +5,6 @@
 [ext_resource path="res://Assets/globos/globos-02.png" type="Texture" id=3]
 [ext_resource path="res://Assets/resources/cofre.png" type="Texture" id=4]
 
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Area2D" type="Area2D" groups=[

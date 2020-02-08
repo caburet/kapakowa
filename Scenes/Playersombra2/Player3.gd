@@ -53,8 +53,8 @@ func get_input():
 	velocity = velocity.normalized() * speed
 	
 func _physics_process(delta):
-    get_input()
-    velocity = move_and_slide(velocity)
+	get_input()
+	velocity = move_and_slide(velocity)
 	
 func get_color():
 	return color

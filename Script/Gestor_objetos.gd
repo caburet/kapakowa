@@ -1,9 +1,9 @@
 extends Node2D
 
-var cinta = load("res://objetos/cinta.png") # Godot loads the resource at compile-time
-var engranaje = load("res://objetos/engranajes.png") # Godot loads the resource at compile-time
-var focos = load("res://objetos/focos.png") # Godot loads the resource at compile-time
-var llave = load("res://objetos/llave.png") # Godot loads the resource at compile-time
+var cinta = load("res://Assets/objetos/cinta.png") # Godot loads the resource at compile-time
+var engranaje = load("res://Assets/objetos/engranajes.png") # Godot loads the resource at compile-time
+var focos = load("res://Assets/objetos/focos.png") # Godot loads the resource at compile-time
+var llave = load("res://Assets/objetos/llave.png") # Godot loads the resource at compile-time
 
 var colores = ["red","green","blue","yellow"] 
 
@@ -19,7 +19,6 @@ func _ready():
 	randomize()
 	for color in colores:
 		azar = randi() % ( reco + 1 )
-		randi() 
 		contenedores[azar].color = color
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
