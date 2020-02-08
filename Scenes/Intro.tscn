@@ -265,7 +265,7 @@ anims/Animintro = SubResource( 1 )
 position = Vector2( -21.4796, 0 )
 scale = Vector2( 1.15, 1.15 )
 frames = SubResource( 2 )
-frame = 28
+frame = 60
 speed_scale = 5.0
 playing = true
 
