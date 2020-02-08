@@ -10,14 +10,18 @@ var engranaje = load("res://Assets/objetos/engranajes.png") # Godot loads the re
 var focos = load("res://Assets/objetos/focos.png") # Godot loads the resource at compile-time
 var llave = load("res://Assets/objetos/llave.png") # Godot loads the resource at compile-time
 
+#var colores = ["blue","yellow"] 
 var colores = ["red","green","blue","yellow"] 
-
 
 var nombres = ["cinta","engranaje","focos","llave"]
 
 var texturas = { "cinta": cinta, "engranaje": engranaje ,"focos" : focos,"llave":llave}
 
 func _ready():
+	if globals.numberplayers==2:
+		colores = ["blue","yellow"] 
+		$Players/Player_3.hide()
+		$Players/Player_4.hide()
 	var contenedores = $Contenedores.get_children()
 	var reco = len(contenedores) - 1
 	var azar
@@ -32,6 +36,16 @@ func _ready():
 		contenedores[azar].color = color
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
+		if len(colores)==2:
+			azar = randi() % ( reco + 1 )
+			contenedores[azar].color = color
+			_invertir(contenedores,azar,reco)
+			reco = reco -1
+			
+			azar =  randi() % ( reco + 1 )
+			contenedores[azar].color = color
+			_invertir(contenedores,azar,reco)
+			reco = reco -1
 	
 	reco = len(contenedores) - 1
 	for color in colores:
@@ -48,7 +62,20 @@ func _ready():
 		contenedores[azar].objeto_color = color
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
-
+		if len(colores)==2:
+			azar =  randi() % ( reco + 1 )
+			while contenedores[azar].objeto_color == color:
+				azar =  randi() % ( reco + 1 )
+			contenedores[azar].objeto_color = color
+			_invertir(contenedores,azar,reco)
+			reco = reco -1
+	
+			azar =  randi() % ( reco + 1 )
+			while contenedores[azar].objeto_color == color:
+				azar =  randi() % ( reco + 1 )
+			contenedores[azar].objeto_color = color
+			_invertir(contenedores,azar,reco)
+			reco = reco -1
 	reco = len(contenedores) - 1
 	for nombre in nombres:
 		azar =  randi() % ( reco + 1 )
@@ -62,8 +89,7 @@ func _ready():
 		contenedores[azar].textura = texturas[nombre]
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
-	
-	
+
 
 func _invertir(contenedores, ref, fin):
 	var auxiliar = contenedores[ref] 
