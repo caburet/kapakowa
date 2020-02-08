@@ -22,12 +22,12 @@ func _ready():
 
 #
 func _on_Area2D_body_entered(body):
-	print("entra algo")
-	print("contenedor",body.get_groups())
+#	print("entra algo")
+#	print("contenedor",body.get_groups())
 	if body.is_in_group("player"):
-		print("Entra player ","color Player: ",body.color," colorContenedor : ", color)
+#		print("Entra player ","color Player: ",body.color," colorContenedor : ", color)
 		if body.get_color() == color :
-			print("mismo color")
+#			print("mismo color")
 			$Particles2D.hide()
 			var nuevo_objeto = referencia.instance()
 			self.get_parent().add_child(nuevo_objeto)
@@ -41,7 +41,7 @@ func _on_Area2D_body_entered(body):
 			self.queue_free()
 		else:
 			
-			print("Tiene que abrirlo--->"+ color)
+#			print("Tiene que abrirlo--->"+ color)
 			if (color== "blue"):
 				$exclam.set_texture(exclamacionBlue)
 			if (color== "red"):

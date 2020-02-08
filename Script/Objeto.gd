@@ -10,8 +10,8 @@ func get_nombre():
 	return nombre
 
 func _on_Area2D_body_entered(body):
-	print("entra algo")
-	print("objeto",body.get_groups())
+#	print("entra algo")
+#	print("objeto",body.get_groups())
 	if body.is_in_group("player"):
 #		print("entra player")
 		if body.get_color() == color :
