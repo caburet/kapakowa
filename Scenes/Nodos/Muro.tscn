@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/Muro.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Nodos/Muro_fragmento.tscn" type="PackedScene" id=2]
+
+
+[node name="Muro" type="Node2D"]
+position = Vector2( 16, 16 )
+script = ExtResource( 1 )
+can_ancho = 32
+can_alto = 18
+referencia = ExtResource( 2 )
+
+[node name="Muro" parent="." instance=ExtResource( 2 )]

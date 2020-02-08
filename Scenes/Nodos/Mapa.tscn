@@ -1,0 +1,186 @@
+[gd_scene load_steps=68 format=2]
+
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_00.png" type="Texture" id=1]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_01.png" type="Texture" id=2]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_02.png" type="Texture" id=3]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_03.png" type="Texture" id=4]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_04.png" type="Texture" id=5]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_05.png" type="Texture" id=6]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_06.png" type="Texture" id=7]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_07.png" type="Texture" id=8]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_08.png" type="Texture" id=9]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_09.png" type="Texture" id=10]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_10.png" type="Texture" id=11]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_11.png" type="Texture" id=12]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_12.png" type="Texture" id=13]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_13.png" type="Texture" id=14]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_14.png" type="Texture" id=15]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_15.png" type="Texture" id=16]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_16.png" type="Texture" id=17]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_17.png" type="Texture" id=18]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_18.png" type="Texture" id=19]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_19.png" type="Texture" id=20]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_20.png" type="Texture" id=21]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_21.png" type="Texture" id=22]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_22.png" type="Texture" id=23]
+[ext_resource path="res://Assets/coreanimacion/Armature_animtion0_23.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Nodos/Reactor.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Script/Reactor.gd" type="Script" id=26]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_00.png" type="Texture" id=27]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_01.png" type="Texture" id=28]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_02.png" type="Texture" id=29]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_03.png" type="Texture" id=30]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_04.png" type="Texture" id=31]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_05.png" type="Texture" id=32]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_06.png" type="Texture" id=33]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_07.png" type="Texture" id=34]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_08.png" type="Texture" id=35]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_09.png" type="Texture" id=36]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_10.png" type="Texture" id=37]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_11.png" type="Texture" id=38]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_12.png" type="Texture" id=39]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_13.png" type="Texture" id=40]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_14.png" type="Texture" id=41]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_15.png" type="Texture" id=42]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_16.png" type="Texture" id=43]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_17.png" type="Texture" id=44]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_18.png" type="Texture" id=45]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_19.png" type="Texture" id=46]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_20.png" type="Texture" id=47]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_21.png" type="Texture" id=48]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_22.png" type="Texture" id=49]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_23.png" type="Texture" id=50]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_24.png" type="Texture" id=51]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_25.png" type="Texture" id=52]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_26.png" type="Texture" id=53]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_27.png" type="Texture" id=54]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_28.png" type="Texture" id=55]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_29.png" type="Texture" id=56]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_30.png" type="Texture" id=57]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_31.png" type="Texture" id=58]
+[ext_resource path="res://Assets/tuberia/Armature_animtion0_32.png" type="Texture" id=59]
+[ext_resource path="res://Scenes/Nodos/Contenedor.tscn" type="PackedScene" id=60]
+[ext_resource path="res://Scenes/Nodos/Objeto.tscn" type="PackedScene" id=61]
+[ext_resource path="res://Script/Gestor_objetos.gd" type="Script" id=62]
+
+
+
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "latiendo",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 10.1595
+height = 7.36813
+
+[sub_resource type="CanvasItemMaterial" id=4]
+blend_mode = 2
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Mapa" type="Node2D"]
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+editor/display_folded = true
+material = SubResource( 1 )
+position = Vector2( 875, 371.053 )
+scale = Vector2( 0.8, 0.8 )
+z_as_relative = false
+frames = SubResource( 2 )
+animation = "latiendo"
+frame = 23
+speed_scale = 2.0
+playing = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2"]
+position = Vector2( -10.8622, 42.516 )
+scale = Vector2( 6.25, 6.25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2/StaticBody2D"]
+position = Vector2( 0.126053, -5.84035 )
+shape = SubResource( 3 )
+
+[node name="Reactor" parent="AnimatedSprite2" instance=ExtResource( 25 )]
+position = Vector2( -10.7201, 53.1645 )
+scale = Vector2( 4.5, 4.5 )
+script = ExtResource( 26 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+material = SubResource( 4 )
+position = Vector2( 870.443, 336.352 )
+scale = Vector2( 0.9, 0.9 )
+z_index = 4
+z_as_relative = false
+frames = SubResource( 5 )
+frame = 29
+speed_scale = 2.0
+playing = true
+
+[node name="Contenedor" parent="." instance=ExtResource( 60 )]
+position = Vector2( 1204.32, 539.513 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Contenedor2" parent="." instance=ExtResource( 60 )]
+position = Vector2( 800.008, 630.832 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Contenedor3" parent="." instance=ExtResource( 60 )]
+position = Vector2( 850.095, 201.734 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Contenedor5" parent="." instance=ExtResource( 60 )]
+position = Vector2( 421.039, 759.684 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Contenedor8" parent="." instance=ExtResource( 60 )]
+position = Vector2( 521.656, 519.213 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Contenedor4" parent="." instance=ExtResource( 60 )]
+position = Vector2( 1107.46, 170.197 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Contenedor6" parent="." instance=ExtResource( 60 )]
+position = Vector2( 439.699, 230.553 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Contenedor7" parent="." instance=ExtResource( 60 )]
+position = Vector2( 1380.61, 350.782 )
+scale = Vector2( 0.5, 0.5 )
+color = "violeta"
+referencia = ExtResource( 61 )
+
+[node name="Gestor_objetos" type="Node2D" parent="."]
+position = Vector2( 872, 420.356 )
+script = ExtResource( 62 )
+[connection signal="body_entered" from="AnimatedSprite2/Reactor" to="AnimatedSprite2/Reactor" method="_on_Reactor_body_entered"]
+[connection signal="body_exited" from="AnimatedSprite2/Reactor" to="AnimatedSprite2/Reactor" method="_on_Reactor_body_exited"]
