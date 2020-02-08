@@ -263,7 +263,7 @@ position = Vector2( 24.2953, -0.850952 )
 "player",
 ]]
 use_parent_material = true
-position = Vector2( 845.679, 226.173 )
+position = Vector2( 731.309, 393.544 )
 rotation = -1.5708
 collision_mask = 0
 script = ExtResource( 18 )
