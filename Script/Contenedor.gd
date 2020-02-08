@@ -41,7 +41,7 @@ func _on_Area2D_body_entered(body):
 			self.queue_free()
 		else:
 			
-#			print("Tiene que abrirlo--->"+ color)
+			print(body.get_color() + "Tiene que abrirlo--->"+ color)
 			if (color== "blue"):
 				$exclam.set_texture(exclamacionBlue)
 			if (color== "red"):

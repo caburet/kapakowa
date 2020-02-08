@@ -10,7 +10,7 @@ var engranaje = load("res://Assets/objetos/engranajes.png") # Godot loads the re
 var focos = load("res://Assets/objetos/focos.png") # Godot loads the resource at compile-time
 var llave = load("res://Assets/objetos/llave.png") # Godot loads the resource at compile-time
 
-var colores = ["blue","blue","blue","blue"] #["red","green","blue","yellow"] 
+var colores = ["red","green","blue","yellow"] 
 
 
 var nombres = ["cinta","engranaje","focos","llave"]
@@ -36,11 +36,15 @@ func _ready():
 	reco = len(contenedores) - 1
 	for color in colores:
 		azar =  randi() % ( reco + 1 )
+		while contenedores[azar].objeto_color == color:
+			azar =  randi() % ( reco + 1 )
 		contenedores[azar].objeto_color = color
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
 
 		azar =  randi() % ( reco + 1 )
+		while contenedores[azar].objeto_color == color:
+			azar =  randi() % ( reco + 1 )
 		contenedores[azar].objeto_color = color
 		_invertir(contenedores,azar,reco)
 		reco = reco -1
