@@ -4,14 +4,68 @@ extends Node2D
 # var a = 2
 var seg = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+var cinta = load("res://Assets/objetos/cinta.png") # Godot loads the resource at compile-time
+var engranaje = load("res://Assets/objetos/engranajes.png") # Godot loads the resource at compile-time
+var focos = load("res://Assets/objetos/focos.png") # Godot loads the resource at compile-time
+var llave = load("res://Assets/objetos/llave.png") # Godot loads the resource at compile-time
+
+var colores = ["red","green","blue","yellow"] 
+
+
+var nombres = ["cinta","engranaje","focos","llave"]
+
+var texturas = { "cinta": cinta, "engranaje": engranaje ,"focos" : focos,"llave":llave}
+
+func _ready():
+	var contenedores = $Contenedores.get_children()
+	var reco = len(contenedores) - 1
+	var azar
+	randomize()
+	for color in colores:
+		azar = randi() % ( reco + 1 )
+		contenedores[azar].color = color
+		_invertir(contenedores,azar,reco)
+		reco = reco -1
+		
+		azar =  randi() % ( reco + 1 )
+		contenedores[azar].color = color
+		_invertir(contenedores,azar,reco)
+		reco = reco -1
+	
+	reco = len(contenedores) - 1
+	for color in colores:
+		azar =  randi() % ( reco + 1 )
+		contenedores[azar].objeto_color = color
+		_invertir(contenedores,azar,reco)
+		reco = reco -1
+
+		azar =  randi() % ( reco + 1 )
+		contenedores[azar].objeto_color = color
+		_invertir(contenedores,azar,reco)
+		reco = reco -1
+
+	reco = len(contenedores) - 1
+	for nombre in nombres:
+		azar =  randi() % ( reco + 1 )
+		contenedores[azar].objeto_nombre = nombre
+		contenedores[azar].textura = texturas[nombre]
+		_invertir(contenedores,azar,reco)
+		reco = reco -1
+
+		azar =  randi() % ( reco + 1 )
+		contenedores[azar].objeto_nombre = nombre
+		contenedores[azar].textura = texturas[nombre]
+		_invertir(contenedores,azar,reco)
+		reco = reco -1
+	
+	
+
+func _invertir(contenedores, ref, fin):
+	var auxiliar = contenedores[ref] 
+	contenedores[ref] = contenedores[fin]
+	contenedores[fin] = auxiliar
+
 
 
 func _on_Timer_timeout():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/fondotileset.jpeg" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Scenes/Reactor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Nodos/Contenedor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Nodos/Objeto.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Script/Gestor_objetos.gd" type="Script" id=8]
 [ext_resource path="res://Assets/spot.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://sounds/krakosha-1.ogg" type="AudioStream" id=11]
@@ -78,9 +77,6 @@ referencia = ExtResource( 7 )
 position = Vector2( 633.105, 533.756 )
 scale = Vector2( 0.5, 0.5 )
 referencia = ExtResource( 7 )
-
-[node name="Gestor_objetos" type="Node2D" parent="Contenedores"]
-script = ExtResource( 8 )
 
 [node name="LucesMapa" type="Node2D" parent="."]
 

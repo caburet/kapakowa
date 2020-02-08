@@ -16,9 +16,7 @@ gravity = Vector3( 0, 0, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[node name="Area2D" type="Area2D" groups=[
-"contenedor",
-]]
+[node name="Area2D" type="Area2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 
