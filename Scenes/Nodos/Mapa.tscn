@@ -97,7 +97,7 @@ scale = Vector2( 0.8, 0.8 )
 z_as_relative = false
 frames = SubResource( 2 )
 animation = "latiendo"
-frame = 22
+frame = 2
 speed_scale = 2.0
 playing = true
 
@@ -120,7 +120,7 @@ scale = Vector2( 0.9, 0.9 )
 z_index = 4
 z_as_relative = false
 frames = SubResource( 5 )
-frame = 28
+frame = 32
 speed_scale = 2.0
 playing = true
 
@@ -137,7 +137,7 @@ color = "violeta"
 referencia = ExtResource( 61 )
 
 [node name="Contenedor3" parent="." instance=ExtResource( 60 )]
-position = Vector2( 850.095, 201.734 )
+position = Vector2( 850.095, 198.48 )
 scale = Vector2( 0.5, 0.5 )
 color = "violeta"
 referencia = ExtResource( 61 )

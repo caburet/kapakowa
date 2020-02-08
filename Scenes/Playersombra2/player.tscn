@@ -68,6 +68,7 @@ blend_mode = 1
 [node name="Node" type="Node"]
 
 [node name="Light2D2" type="Light2D" parent="."]
+visible = false
 position = Vector2( 411.651, -85.3736 )
 rotation = -1.5708
 texture = ExtResource( 1 )
@@ -149,6 +150,9 @@ scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 4 )
 animation = "arriba"
 
+[node name="tool" type="Sprite" parent="Player"]
+position = Vector2( 20.3848, 0.463379 )
+
 [node name="Player2" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
@@ -198,6 +202,9 @@ scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 4 )
 animation = "arriba"
 frame = 1
+
+[node name="tool2" type="Sprite" parent="Player2"]
+position = Vector2( 22.5215, -1.30359 )
 
 [node name="Player3" type="KinematicBody2D" parent="." groups=[
 "player",
@@ -249,6 +256,9 @@ frames = SubResource( 4 )
 animation = "arriba"
 frame = 1
 
+[node name="tool3" type="Sprite" parent="Player3"]
+position = Vector2( 24.2953, -0.850952 )
+
 [node name="Player4" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
@@ -289,6 +299,9 @@ margin_right = 101.0
 margin_bottom = -7.97058
 rect_rotation = 90.0
 text = "Player 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="animacion" type="AnimatedSprite" parent="Player4"]
 modulate = Color( 0.780392, 0, 1, 0.862745 )
@@ -298,3 +311,6 @@ scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 4 )
 animation = "arriba"
 frame = 1
+
+[node name="tool4" type="Sprite" parent="Player4"]
+position = Vector2( 25.3893, -0.655457 )

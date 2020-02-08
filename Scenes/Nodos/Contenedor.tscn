@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/Contenedor.gd" type="Script" id=1]
 [ext_resource path="res://Assets/globos/globos-06.png" type="Texture" id=2]
@@ -6,6 +6,15 @@
 [ext_resource path="res://Assets/resources/cofre.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 16.19
+flag_disable_z = true
+spread = 88.45
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [node name="Area2D" type="Area2D" groups=[
 "contenedor",
@@ -32,4 +41,9 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -1.39668, 0.698349 )
 texture = ExtResource( 4 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+scale = Vector2( 2, 2 )
+amount = 20
+process_material = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]

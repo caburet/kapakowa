@@ -28,6 +28,7 @@ func _on_Area2D_body_entered(body):
 		print("Entra player ","color Player: ",body.color," colorContenedor : ", color)
 		if body.get_color() == color :
 			print("mismo color")
+			$Particles2D.hide()
 			var nuevo_objeto = referencia.instance()
 			self.get_parent().add_child(nuevo_objeto)
 			nuevo_objeto.color = objeto_color
@@ -54,3 +55,5 @@ func _on_Area2D_body_entered(body):
 			yield(get_tree().create_timer(1.0), "timeout")
 			$globo.hide()
 			$exclam.hide()
+
+

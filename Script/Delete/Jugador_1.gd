@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+
 #--------------------MOVIMIENTO EN 8 SENTIDOS-----------------------------
 export (String) var color = "blue"
 

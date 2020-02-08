@@ -1,0 +1,95 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Script/Player1.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Playersombra2/spot.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Personaje/Sin título-5.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Personaje/frente 1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Personaje/Sin título-4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Personaje/Sin título-2.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Personaje/frente 3.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Personaje/Sin título-3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Personaje/frente 4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Personaje/esp1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Personaje/frente 2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Personaje/esp3.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Personaje/esp2.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Personaje/esp4.png" type="Texture" id=14]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "arriba",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "derecha",
+"speed": 5.0
+} ]
+
+[node name="KinematicBody2D" type="KinematicBody2D" groups=[
+"player",
+]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Resplandor" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+texture_scale = 5.0
+color = Color( 1, 1, 1, 0.392157 )
+mode = 2
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 2.0
+
+[node name="Color" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+color = Color( 0, 0, 1, 0.784314 )
+energy = 1.5
+shadow_enabled = true
+shadow_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -8.59909, -0.277374 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0.0627451, 1, 1 )
+margin_left = 50.0
+margin_top = -21.0
+margin_right = 97.0
+margin_bottom = -7.0
+rect_rotation = 90.0
+text = "Player1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animacion" type="AnimatedSprite" parent="."]
+modulate = Color( 0.0823529, 0.0823529, 0.929412, 0.862745 )
+material = SubResource( 3 )
+rotation = 1.5708
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 4 )
+animation = "arriba"
+
+[node name="tool" type="Sprite" parent="."]
+position = Vector2( 20.3848, 0.463379 )

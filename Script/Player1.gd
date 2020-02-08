@@ -12,6 +12,15 @@ var suffix=''
 var velocity = Vector2()
 
 func _ready():
+	if numero=='1':
+		$Color.color=Color(0,0,1,0.78)
+	if numero=='2':
+		$Color.color=Color(1,1,0,0.78)
+	if numero=='3':
+		$Color.color=Color(1,0,0,0.78)
+	if numero=='4':
+		$Color.color=Color(0.78,0,1,0.78)
+	$Label.text="Player "+numero
 	self.z_index = 3
 
 func get_input():
