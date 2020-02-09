@@ -30,23 +30,23 @@ func _on_Area2D_body_entered(body):
 #	print("Reactor entra algo")
 	if body.is_in_group("player"):
 #		print("entro un player")
-		if ( !objeto_1_faltante && body.objeto_nombre() == objeto_1):
+		if (  body.objeto_nombre() == objeto_1):
 			print("Reactor : entro ")
 			objeto_1_proceso = true
 			objeto_1_jugador = body
 			$Timer_1.start(tiempoRequerido)
 			
-		elif(!objeto_2_faltante && body.objeto_nombre() == objeto_2):
+		elif( body.objeto_nombre() == objeto_2):
 			print("Reactor : entro ")
 			objeto_2_proceso = true
 			objeto_2_jugador = body
 			$Timer_2.start(tiempoRequerido)
-		elif(!objeto_3_faltante && body.objeto_nombre() == objeto_3):
+		elif(body.objeto_nombre() == objeto_3):
 			print("Reactor : entro ")
 			objeto_3_proceso = true
 			objeto_3_jugador = body
 			$Timer_3.start(tiempoRequerido)
-		elif(!objeto_4_faltante && body.objeto_nombre() == objeto_4):
+		elif( body.objeto_nombre() == objeto_4):
 			print("Reactor : entro ")
 			objeto_4_proceso = true
 			objeto_4_jugador = body
@@ -72,6 +72,7 @@ func _on_Timer_1_timeout():
 	$Timer_1.stop()
 	objeto_1_faltante = true
 	objeto_1_jugador.set_cargarObjetos(null)
+	objeto_1_jugador.get_child(6).hide()
 	_termino()
 
 
@@ -80,6 +81,7 @@ func _on_Timer_2_timeout():
 	$Timer_2.stop()
 	objeto_2_faltante = true
 	objeto_2_jugador.set_cargarObjetos(null)
+	objeto_2_jugador.get_child(6).hide()
 	_termino()
 
 func _on_Timer_3_timeout():
@@ -87,6 +89,7 @@ func _on_Timer_3_timeout():
 	$Timer_3.stop()
 	objeto_3_faltante = true
 	objeto_3_jugador.set_cargarObjetos(null)
+	objeto_3_jugador.get_child(6).hide()
 	_termino()
 
 func _on_Timer_4_timeout():
@@ -94,8 +97,13 @@ func _on_Timer_4_timeout():
 	$Timer_4.stop()
 	objeto_4_faltante = true
 	objeto_4_jugador.set_cargarObjetos(null)
+	objeto_4_jugador.get_child(6).hide()
 	_termino()
 	
 func _termino():
+	print (objeto_1_faltante)
+	print (objeto_2_faltante)
+	print (objeto_3_faltante)
+	print (objeto_4_faltante)
 	if(objeto_1_faltante && objeto_2_faltante && objeto_3_faltante && objeto_4_faltante ):
-		self.get_tree().change_scene("res://win.tscn")
+		self.get_tree().change_scene("res://Scenes/win.tscn")

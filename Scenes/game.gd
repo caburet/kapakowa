@@ -107,6 +107,7 @@ func _on_Timer_timeout():
 
 
 func _on_Timer_luces_timeout():
+
 	var random= randi()%11+1
 	if randi()%11+1<random:
 		$LucesMapa/Light2D2.hide()
@@ -126,7 +127,7 @@ func _on_Timer_luces_timeout():
 		$LucesMapa/Light2D9.hide()
 	if randi()%11+1<random:
 		$LucesMapa/Light2D10.hide()
-	$LucesMapa/Timer_luces_on.start()
+	$Timer_luces_on.start()
 	pass # Replace with function body.
 
 
@@ -140,5 +141,5 @@ func _on_Timer_luces_on_timeout():
 	$LucesMapa/Light2D8.show()
 	$LucesMapa/Light2D9.show()
 	$LucesMapa/Light2D10.show()
-	$LucesMapa/Timer_luces_on.stop()
+	$Timer_luces_on.stop()
 	pass # Replace with function body.

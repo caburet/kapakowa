@@ -85,63 +85,65 @@ position = Vector2( 424.137, 648.429 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.964706, 0.215686, 0.215686, 1 )
 
 [node name="Light2D3" type="Light2D" parent="LucesMapa"]
 position = Vector2( 567.332, 259.05 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.964706, 0.2, 0.2, 1 )
 
 [node name="Light2D4" type="Light2D" parent="LucesMapa"]
 position = Vector2( 1233.3, 189.285 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.964706, 0.188235, 0.188235, 1 )
 
 [node name="Light2D5" type="Light2D" parent="LucesMapa"]
 position = Vector2( 985.754, 649.832 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.972549, 0.14902, 0.14902, 1 )
 
 [node name="Light2D6" type="Light2D" parent="LucesMapa"]
 position = Vector2( 1022.71, 402.216 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.94902, 0.207843, 0.207843, 1 )
 
 [node name="Light2D7" type="Light2D" parent="LucesMapa"]
 position = Vector2( 882.392, 366.913 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.960784, 0.160784, 0.160784, 1 )
 
 [node name="Light2D8" type="Light2D" parent="LucesMapa"]
 position = Vector2( 702.699, 158.783 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.972549, 0.160784, 0.160784, 1 )
 
 [node name="Light2D9" type="Light2D" parent="LucesMapa"]
 position = Vector2( 320.698, 299.783 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+texture_scale = 1.5
+color = Color( 1, 0.0156863, 0.0156863, 0.756863 )
+energy = 1.2
 
 [node name="Light2D10" type="Light2D" parent="LucesMapa"]
 position = Vector2( 284.86, 613.368 )
 z_index = 2
 z_as_relative = false
 texture = ExtResource( 9 )
-color = Color( 0.968627, 0.384314, 0.384314, 1 )
+color = Color( 0.941176, 0.176471, 0.176471, 1 )
 
 [node name="Timer_luces" type="Timer" parent="LucesMapa"]
 wait_time = 0.3
@@ -177,6 +179,14 @@ stream = ExtResource( 11 )
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Timer_luces" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="Timer_luces_on" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
 [node name="Label" type="Label" parent="."]
 margin_left = 688.089
 margin_top = 296.953
@@ -188,3 +198,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer_luces" to="." method="_on_Timer_luces_timeout"]
+[connection signal="timeout" from="Timer_luces_on" to="." method="_on_Timer_luces_on_timeout"]

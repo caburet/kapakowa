@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Script/Player1.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Playersombra2/spot.png" type="Texture" id=2]
@@ -15,21 +15,21 @@
 [ext_resource path="res://Assets/Personaje/esp2.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Personaje/esp4.png" type="Texture" id=14]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=2]
 blend_mode = 1
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "arriba",
-"speed": 5.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "arriba",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 9 ) ],
@@ -42,6 +42,9 @@ animations = [ {
 "name": "derecha",
 "speed": 5.0
 } ]
+
+[sub_resource type="CanvasItemMaterial" id=4]
+blend_mode = 1
 
 [node name="KinematicBody2D" type="KinematicBody2D" groups=[
 "player",
@@ -69,9 +72,10 @@ shadow_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -8.59909, -0.277374 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]
+visible = false
 modulate = Color( 0, 0.0627451, 1, 1 )
 margin_left = 50.0
 margin_top = -21.0
@@ -85,11 +89,16 @@ __meta__ = {
 
 [node name="animacion" type="AnimatedSprite" parent="."]
 modulate = Color( 0.0823529, 0.0823529, 0.929412, 0.862745 )
-material = SubResource( 3 )
+material = SubResource( 2 )
 rotation = 1.5708
 scale = Vector2( 0.1, 0.1 )
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 animation = "arriba"
 
 [node name="tool" type="Sprite" parent="."]
 position = Vector2( 20.3848, 0.463379 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 4 )
+position = Vector2( 33.5575, 0.507553 )
+scale = Vector2( 0.5, 0.5 )
