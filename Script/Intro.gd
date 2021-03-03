@@ -19,15 +19,15 @@ func _on_Button_pressed():
 	pass # Replace with function body.
 
 
-func _on_Button2_pressed():
-	$PantallaInicio.visible=false
-	$Creditos.visible=true
-	$Start.visible=false
-	$Creditos2.visible=false
-	$Salir.visible=false
-	$Button4.visible=true
-	$Creditos.play()
-	pass # Replace with function body.
+#func _on_Button2_pressed():
+#	$PantallaInicio.visible=false
+#	$Creditos.visible=true
+#	$Start.visible=false
+#	$Creditos2.visible=false
+#	$Salir.visible=false
+#	$Button4.visible=true
+#	$Creditos.play()
+#	pass # Replace with function body.
 
 
 func _on_Salir_pressed():
@@ -38,8 +38,20 @@ func _on_Salir_pressed():
 func _on_Button4_pressed():
 	$PantallaInicio.visible=true
 	$Creditos.visible=false
-	$Start.visible=true
-	$Creditos2.visible=true
-	$Salir.visible=true
+	$Pj.hide()
 	$Button4.visible=false
+	pass # Replace with function body.
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	$Pj.hide()
+	$PantallaInicio.show()
+	pass # Replace with function body.
+
+
+func _on_Creditos2_pressed():
+	$PantallaInicio.visible=false
+	$Creditos.visible=true
+	$Button4.visible=true
+	$Creditos.play()	
 	pass # Replace with function body.
