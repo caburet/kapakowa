@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=112 format=2]
 
 [ext_resource path="res://Script/Intro.gd" type="Script" id=1]
 [ext_resource path="res://Assets/fondo perso.png" type="Texture" id=2]
@@ -107,6 +107,7 @@
 [ext_resource path="res://Assets/creditos/Comp 2_00027.png" type="Texture" id=105]
 [ext_resource path="res://Assets/creditos/Comp 2_00028.png" type="Texture" id=106]
 [ext_resource path="res://Assets/creditos/Comp 2_00029.png" type="Texture" id=107]
+[ext_resource path="res://Assets/fondotileset.jpeg" type="Texture" id=108]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Animintro"
@@ -265,11 +266,10 @@ stream = ExtResource( 5 )
 anims/Animintro = SubResource( 1 )
 
 [node name="PantallaInicio" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( -21.4796, 0 )
 scale = Vector2( 1.15, 1.15 )
 frames = SubResource( 2 )
-frame = 56
+frame = 43
 speed_scale = 5.0
 playing = true
 
@@ -309,6 +309,56 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PopupMenu" type="Node2D" parent="PantallaInicio"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="PantallaInicio/PopupMenu"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 108 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PantallaInicio/PopupMenu"]
+margin_left = -177.304
+margin_top = -85.9545
+margin_right = -54.3039
+margin_bottom = -66.9545
+rect_scale = Vector2( 3, 3 )
+text = "Number of players"
+
+[node name="Button" type="Button" parent="PantallaInicio/PopupMenu"]
+margin_left = -169.215
+margin_top = -25.1137
+margin_right = -149.215
+margin_bottom = -5.11371
+rect_scale = Vector2( 3, 3 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="PantallaInicio/PopupMenu"]
+margin_left = -84.6076
+margin_top = -25.1137
+margin_right = -64.6076
+margin_bottom = -5.11371
+rect_scale = Vector2( 3, 3 )
+text = "2"
+
+[node name="Button3" type="Button" parent="PantallaInicio/PopupMenu"]
+margin_left = -3.13367
+margin_top = -25.1137
+margin_right = 16.8663
+margin_bottom = -5.11371
+rect_scale = Vector2( 3, 3 )
+text = "3"
+
+[node name="Button4" type="Button" parent="PantallaInicio/PopupMenu"]
+margin_left = 79.9071
+margin_top = -26.591
+margin_right = 99.9071
+margin_bottom = -6.59099
+rect_scale = Vector2( 3, 3 )
+text = "4"
+
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( -1.43195, 340.81 )
 enabled = false
@@ -330,9 +380,9 @@ frame = 27
 speed_scale = 2.0
 
 [node name="Button4" type="Button" parent="."]
-margin_left = -683.954
+margin_left = -687.558
 margin_top = -443.414
-margin_right = -671.954
+margin_right = -675.558
 margin_bottom = -423.414
 rect_scale = Vector2( 109.797, 42.7661 )
 flat = true
@@ -342,7 +392,11 @@ __meta__ = {
 }
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
-[connection signal="pressed" from="PantallaInicio/Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="PantallaInicio/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="PantallaInicio/Creditos2" to="." method="_on_Creditos2_pressed"]
 [connection signal="pressed" from="PantallaInicio/Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="PantallaInicio/PopupMenu/Button" to="." method="_on_Button_pressed" binds= [ "1" ]]
+[connection signal="pressed" from="PantallaInicio/PopupMenu/Button2" to="." method="_on_Button_pressed" binds= [ "2" ]]
+[connection signal="pressed" from="PantallaInicio/PopupMenu/Button3" to="." method="_on_Button_pressed" binds= [ "3" ]]
+[connection signal="pressed" from="PantallaInicio/PopupMenu/Button4" to="." method="_on_Button_pressed" binds= [ "4" ]]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]

@@ -14,20 +14,12 @@ func _ready():
 #	pass
 
 
-func _on_Button_pressed():
+func _on_Button_pressedasa():
+	print("_on_Button_pressed()")
+	globals.numberplayers= self.text
 	get_tree().change_scene("res://Scenes/game.tscn")
 	pass # Replace with function body.
 
-
-#func _on_Button2_pressed():
-#	$PantallaInicio.visible=false
-#	$Creditos.visible=true
-#	$Start.visible=false
-#	$Creditos2.visible=false
-#	$Salir.visible=false
-#	$Button4.visible=true
-#	$Creditos.play()
-#	pass # Replace with function body.
 
 
 func _on_Salir_pressed():
@@ -54,4 +46,18 @@ func _on_Creditos2_pressed():
 	$Creditos.visible=true
 	$Button4.visible=true
 	$Creditos.play()	
+	pass # Replace with function body.
+
+
+func _on_Start_pressed():
+	$PantallaInicio/PopupMenu.show()
+	
+
+	pass # Replace with function body.
+
+
+func _on_Button_pressed(extra_arg_0):
+	print("_on_Button_pressed()")
+	globals.numberplayers=extra_arg_0
+	get_tree().change_scene("res://Scenes/game.tscn")
 	pass # Replace with function body.

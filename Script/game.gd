@@ -18,10 +18,18 @@ var nombres = ["cinta","engranaje","focos","llave"]
 var texturas = { "cinta": cinta, "engranaje": engranaje ,"focos" : focos,"llave":llave}
 
 func _ready():
-	if globals.numberplayers==2:
+	if int(globals.numberplayers)==1:
+		colores = ["blue"] 
+		$Players/Player_2.hide()
+		$Players/Player_3.hide()
+		$Players/Player_4.hide()	
+	if int(globals.numberplayers)==2:
 		colores = ["blue","yellow"] 
 		$Players/Player_3.hide()
 		$Players/Player_4.hide()
+	if int(globals.numberplayers)==3:
+		colores = ["blue","green","yellow"] 
+		$Players/Player_4.hide()		
 	var contenedores = $Contenedores.get_children()
 	var reco = len(contenedores) - 1
 	var azar

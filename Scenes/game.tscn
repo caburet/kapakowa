@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scenes/game.gd" type="Script" id=1]
+[ext_resource path="res://Script/game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/fondotileset.jpeg" type="Texture" id=2]
 [ext_resource path="res://Scenes/tilesetconverrido.tres" type="TileSet" id=3]
 [ext_resource path="res://Scenes/Occluder.tscn" type="PackedScene" id=4]
@@ -197,6 +197,7 @@ text = "60"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer_luces" to="." method="_on_Timer_luces_timeout"]
 [connection signal="timeout" from="Timer_luces_on" to="." method="_on_Timer_luces_on_timeout"]
